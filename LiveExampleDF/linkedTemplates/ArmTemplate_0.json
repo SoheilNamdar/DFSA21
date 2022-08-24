@@ -204,6 +204,37 @@
 				"[concat(variables('factoryId'), '/datasets/empCsv')]",
 				"[concat(variables('factoryId'), '/datasets/AzureSqlTable1')]"
 			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/My1MinTrigger')]",
+			"type": "Microsoft.DataFactory/factories/triggers",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"runtimeState": "Started",
+				"pipelines": [
+					{
+						"pipelineReference": {
+							"referenceName": "TxtToSql",
+							"type": "PipelineReference"
+						},
+						"parameters": {}
+					}
+				],
+				"type": "ScheduleTrigger",
+				"typeProperties": {
+					"recurrence": {
+						"frequency": "Minute",
+						"interval": 1,
+						"startTime": "2022-08-24T10:15:00",
+						"endTime": "2022-08-25T10:15:00",
+						"timeZone": "Central Europe Standard Time"
+					}
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/TxtToSql')]"
+			]
 		}
 	]
 }
