@@ -7,13 +7,13 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "LiveExampleDF"
 		},
-		"MyBlobStorage_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'MyBlobStorage'"
-		},
 		"MyAzureSqlDatabase_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'MyAzureSqlDatabase'"
+		},
+		"MyBlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'MyBlobStorage'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -42,11 +42,11 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"MyBlobStorage_connectionString": {
-						"value": "[parameters('MyBlobStorage_connectionString')]"
-					},
 					"MyAzureSqlDatabase_connectionString": {
 						"value": "[parameters('MyAzureSqlDatabase_connectionString')]"
+					},
+					"MyBlobStorage_connectionString": {
+						"value": "[parameters('MyBlobStorage_connectionString')]"
 					}
 				}
 			},

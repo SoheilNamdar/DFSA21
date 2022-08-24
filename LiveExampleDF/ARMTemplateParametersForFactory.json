@@ -5,10 +5,10 @@
 		"factoryName": {
 			"value": "LiveExampleDF"
 		},
-		"MyBlobStorage_connectionString": {
+		"MyAzureSqlDatabase_connectionString": {
 			"value": ""
 		},
-		"MyAzureSqlDatabase_connectionString": {
+		"MyBlobStorage_connectionString": {
 			"value": ""
 		}
 	}
